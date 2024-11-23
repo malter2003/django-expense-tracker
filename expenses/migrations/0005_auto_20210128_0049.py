@@ -3,7 +3,8 @@
 import datetime
 
 from django.db import migrations, models
-from django.utils.timezone import utc
+from datetime import timezone
+
 
 
 class Migration(migrations.Migration):
@@ -21,7 +22,7 @@ class Migration(migrations.Migration):
             model_name="expense",
             name="date",
             field=models.DateTimeField(
-                default=datetime.datetime(2021, 1, 27, 23, 49, 14, 507329, tzinfo=utc)
+                default=datetime.datetime(2021, 1, 27, 23, 49, 14, 507329, tzinfo=timezone.utc)
             ),
         ),
     ]

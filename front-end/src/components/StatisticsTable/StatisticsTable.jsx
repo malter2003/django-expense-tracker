@@ -63,11 +63,11 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                   className='statistics'
                   data-test='stats-current-month-expenses'
                 >
-                  {`€ ${currentMonthExpenseSum}`}
+                  {`$ ${currentMonthExpenseSum}`}
 
                   {budget?.amount && (
                     <>
-                      {`/ € ${budget.amount} `}
+                      {`/ $ ${budget.amount} `}
                       {budget.amount > currentMonthExpenseSum ? (
                         <span className='badge badge-pill badge-success mx-1'>
                           {" "}
@@ -107,7 +107,7 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                   className='statistics'
                   data-test='stats-last-month-expenses'
                 >
-                  {`€ ${oneMonthAgoExpenseSum}`}
+                  {`$ ${oneMonthAgoExpenseSum}`}
                 </td>
               </tr>
               <tr>
@@ -135,7 +135,7 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                   className='statistics'
                   data-test='stats-monthly-expense-average'
                 >
-                  € {monthlyExpenseAverage}
+                  $ {monthlyExpenseAverage}
                 </td>
               </tr>
 
@@ -145,7 +145,7 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                   className='statistics'
                   data-test='stats-daily-expense-average'
                 >
-                  € {dailyExpenseAverage}
+                  $ {dailyExpenseAverage}
                 </td>
               </tr>
               <tr>
@@ -155,7 +155,7 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                   data-test='stats-biggest-category-expense'
                 >
                   {biggestCategoryExpenseCategory}:
-                  <p className='black-font'>€ {biggestCategoryExpenseAmount}</p>
+                  <p className='black-font'>$ {biggestCategoryExpenseAmount}</p>
                 </td>
               </tr>
               <tr>
@@ -166,7 +166,7 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                 >
                   {smallestCategoryExpenseCategory}:
                   <p className='black-font'>
-                    € {smallestCategoryExpenseAmount}
+                    $ {smallestCategoryExpenseAmount}
                   </p>
                 </td>
               </tr>
@@ -174,20 +174,20 @@ const StatisticsTable = ({ budgetData, statisticsData }) => {
                 <td>Biggest expense:</td>
                 <td className='statistics' data-test='stats-biggest-expense'>
                   {maxExpenseContent}
-                  <p className='black-font'>€ {maxExpense}</p>
+                  <p className='black-font'>$ {maxExpense}</p>
                 </td>
               </tr>
               <tr>
                 <td>Smallest expense:</td>
                 <td className='statistics' data-test='stats-smallest-expense'>
                   {minExpenseContent}
-                  <p className='black-font'>€ {minExpense}</p>
+                  <p className='black-font'>$ {minExpense}</p>
                 </td>
               </tr>
               <tr className='font-weight-bold'>
-                <td>Total expenses:</td>
+                <td>Total Expenses:</td>
                 <td className='statistics' data-test='stats-total-expenses'>
-                  € {sumExpense}
+                  $ {sumExpense}
                 </td>
               </tr>
             </tbody>

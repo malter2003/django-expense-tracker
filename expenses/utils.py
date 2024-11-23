@@ -126,7 +126,7 @@ class DateGenerator:
     @staticmethod
     def get_date(date=None):
         if date is not None:
-            return datetime.strptime(str(date), "%Y-%m-%d")
+            return datetime.strptime(str(date), "%m-%d-%Y")
         else:
             return datetime.now()
 
@@ -176,9 +176,9 @@ class DateGenerator:
     def get_formated_date(date=None):
         """Returns a date string in the format : yyyy-mm-dd!"""
         if date:
-            return datetime.strftime(date, "%Y-%m-%d")
+            return datetime.strftime(date, "%m-%d-%Y")
         else:
-            return datetime.strftime(DateGenerator.get_date(), "%Y-%m-%d")
+            return datetime.strftime(DateGenerator.get_date(), "%m-%d-%Y")
 
 
 class ExpenseGenerator:

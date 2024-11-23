@@ -266,16 +266,14 @@ class Expense(models.Model):
     content = models.CharField(max_length=100, blank=False)
 
     CATEGORY_CHOICES = (
-        ("Bar tabs", "Bar tabs"),
-        ("Monthly bill", "Monthly bill"),
-        ("Online shopping", "Online shopping"),
-        ("Electronics", "Electronics"),
-        ("Groceries", "Groceries"),
-        ("Taxi fare", "Taxi fare"),
-        ("Miscellaneous", "Miscellaneous"),
+        ("Transportation", "Transportation"),
+        ("Entertainment", "Entertainment"),
+        ("Shopping", "Shopping"),
+        ("Bills & Subscriptions", "Bills & Subscriptions"),
+        ("Other", "Other"),
     )
     category = models.CharField(
-        max_length=20, choices=CATEGORY_CHOICES, null=True, blank=False)
+        max_length=21, choices=CATEGORY_CHOICES, null=True, blank=False)
     source = models.CharField(max_length=30, blank=False)
     date = models.DateTimeField(default=timezone.now, blank=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -286,7 +284,7 @@ class Expense(models.Model):
         return str(self.amount)
 
     def get_date_without_time(self):
-        date_without_time = utils.reformat_date(self.date, "%Y-%m-%d")
+        date_without_time = utils.reformat_date(self.date, "%m-%d-%Y")
         return date_without_time
 
     class Meta:
@@ -294,13 +292,23 @@ class Expense(models.Model):
 
 
 class Budget(models.Model):
+    BUDGET_TYPES = (
+        ("Daily", "Daily"),
+        ("Weekly", "Weekly"),
+        ("Monthly", "Monthly"),
+    )
     amount = models.DecimalField(
         default=10,
         decimal_places=2,
         max_digits=5,
         validators=[MinValueValidator(Decimal("0.01"))],
     )
+    budget_type = models.CharField(
+        max_length=10,
+        choices=BUDGET_TYPES,
+        default="Monthly",  # Default to "Monthly"
+    )
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.amount)
+        return f"{self.budget_type} Budget: {self.amount}"

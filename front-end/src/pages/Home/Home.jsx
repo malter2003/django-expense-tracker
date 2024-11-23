@@ -64,7 +64,7 @@ const Home = ({ accessToken }) => {
           chartData={lineChartData}
           title={"Total amount spent per day"}
           xLabel={"Dates"}
-          yLabel={"(€) Amounts"}
+          yLabel={"($) Amounts"}
         />
       )}
 

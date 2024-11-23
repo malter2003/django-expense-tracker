@@ -110,13 +110,11 @@ const UpdateExpenseForm = () => {
             <option value=''>
               ---------
             </option>
-            <option value='Bar tabs'>Bar tabs</option>
-            <option value='Monthly bill'>Monthly bill</option>
-            <option value='Online shopping'>Online shopping</option>
-            <option value='Electronics'>Electronics</option>
-            <option value='Groceries'>Groceries</option>
-            <option value='Taxi fare'>Taxi fare</option>
-            <option value='Miscellaneous'>Miscellaneous</option>
+            <option value='Transportation'>Transportation</option>
+            <option value='Entertainment'>Entertainment</option>
+            <option value='Shopping'>Shopping</option>
+            <option value='Bills & Subscriptions'>Bills & Subscriptions</option>
+            <option value='Other'>Other</option>
           </select>
         </p>
         <p>

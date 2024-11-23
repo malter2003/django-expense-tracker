@@ -176,7 +176,6 @@ export class API {
     try {
       const url = `${apiUrl}/paginated-expenses/?page=${paginationSuffix}`;
       const res = await API._fetch(url, accessToken);
-
       if (res.ok) {
         const paginatedExpenses = await res.json();
 
@@ -217,7 +216,7 @@ export class API {
         accessToken,
         body
       );
-
+      console.log("Server response: ", res);
       if (res.status === 201) {
         setAmount(0);
         setCategory("");

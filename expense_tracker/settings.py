@@ -59,7 +59,7 @@ INSTALLED_APPS = [
 
 ]
 
-CURRENCY = "€"
+CURRENCY = "$"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

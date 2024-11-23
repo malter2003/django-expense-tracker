@@ -12,7 +12,7 @@ const formatDateToYYYYMMDD = (dateString) => {
   const day = String(inputDate.getDate()).padStart(2, "0");
 
   // Create the formatted date string
-  const formattedDateString = `${year}-${month}-${day}`;
+  const formattedDateString = `${month}-${day}-${year}`;
   return formattedDateString;
 };
 
@@ -41,7 +41,7 @@ const ExpenseTable = ({ expenses = [] }) => {
                   <td>{expense.source}</td>
                   <td>{expense.category}</td>
                   <td>{expense.content}</td>
-                  <td>€ {expense.amount}</td>
+                  <td>$ {expense.amount}</td>
                   <td className='font-weight-bold'>
                     <a
                       href={`/update-expense/${expense.id}/`}

@@ -25,7 +25,7 @@ describe("Create expense Tests", () => {
     cy.url().should("eq", Cypress.config().baseUrl);
     cy.get("#expense-table > table > tbody > tr:nth-child(1)")
       .should("be.visible")
-      .and("contain", `€ ${ctx.expense.amount}`)
+      .and("contain", `$ ${ctx.expense.amount}`)
       .and("contain", ctx.expense.content)
       .and("contain", ctx.expense.category)
       .and("contain", ctx.expense.source)

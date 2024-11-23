@@ -63,7 +63,7 @@ describe("Statistics Tests", () => {
     cy.visit("/charts/");
     cy.get("[data-test=stats-current-month-expenses]")
       .should("be.visible")
-      .and("contain", `€ ${currentMonthExpenses}`);
+      .and("contain", `$ ${currentMonthExpenses}`);
   });
 
   it("should display correct last month total expenses", () => {
@@ -79,7 +79,7 @@ describe("Statistics Tests", () => {
     cy.visit("/charts/");
     cy.get("[data-test=stats-last-month-expenses]")
       .should("be.visible")
-      .and("contain", `€ ${lastMonthExpenses}`);
+      .and("contain", `$ ${lastMonthExpenses}`);
   });
 
   it("should display correct current vs last month expense percentage difference", () => {
@@ -165,7 +165,7 @@ describe("Statistics Tests", () => {
     cy.get("[data-test=stats-biggest-category-expense]")
       .should("be.visible")
       .and("contain", `${ctx.biggestCategoryExpense.category}:`)
-      .and("contain", `€ ${ctx.biggestCategoryExpense.categoryExpenseAmount}`);
+      .and("contain", `$ ${ctx.biggestCategoryExpense.categoryExpenseAmount}`);
   });
 
   it("should display correct smallest category expense", () => {
@@ -173,7 +173,7 @@ describe("Statistics Tests", () => {
     cy.get("[data-test=stats-smallest-category-expense]")
       .should("be.visible")
       .and("contain", `${ctx.smallestCategoryExpense.category}:`)
-      .and("contain", `€ ${ctx.smallestCategoryExpense.categoryExpenseAmount}`);
+      .and("contain", `$ ${ctx.smallestCategoryExpense.categoryExpenseAmount}`);
   });
 
   it("should display correct smallest expense", () => {
@@ -184,7 +184,7 @@ describe("Statistics Tests", () => {
     cy.visit("/charts/");
     cy.get("[data-test=stats-smallest-expense]")
       .should("be.visible")
-      .and("contain", `€ ${smallestExpense}`);
+      .and("contain", `$ ${smallestExpense}`);
   });
 
   it("should display correct biggest expense", () => {
@@ -195,7 +195,7 @@ describe("Statistics Tests", () => {
     cy.visit("/charts/");
     cy.get("[data-test=stats-biggest-expense]")
       .should("be.visible")
-      .and("contain", `€ ${biggestExpense}`);
+      .and("contain", `$ ${biggestExpense}`);
   });
 
   it("should display correct total expenses", () => {
@@ -206,6 +206,6 @@ describe("Statistics Tests", () => {
     cy.visit("/charts/");
     cy.get("[data-test=stats-total-expenses]")
       .should("be.visible")
-      .and("contain", `€ ${totalExpenses}`);
+      .and("contain", `$ ${totalExpenses}`);
   });
 });

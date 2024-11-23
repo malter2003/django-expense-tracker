@@ -5,3 +5,29 @@
   margin-bottom: 10px;
   padding: 10px;
 }
+
+.progress-bar {
+  position: relative;
+  height: 20px; 
+}
+
+.progress span {
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: 1px 1px 2px black; 
+}
+
+.progress-bar.bg-danger span {
+  color: white; 
+  text-shadow: 1px 1px 2px black; 
+}
+
+.monthly-budget {
+  color: green;
+  text-align: center; /* Center aligns the text */
+  margin-top: 10px; /* Adds spacing from the progress bar */
+  font-size: 1rem; /* Adjust the font size */
+  font-weight: bold; /* Makes it stand out */
+}
+
+

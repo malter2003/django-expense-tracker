@@ -31,7 +31,7 @@ describe("Update budget Tests", () => {
     cy.get("[data-test=monthly-budget]")
       .should("be.visible")
       .and("contain", `Monthly budget:`)
-      .and("contain", `€ ${ctx.newBudget.getDecimalAmount()}`);
+      .and("contain", `$ ${ctx.newBudget.getDecimalAmount()}`);
 
     cy.get("[data-test=update-budget]").should("be.visible");
     cy.get("[data-test=delete-budget]").should("be.visible");
@@ -63,7 +63,7 @@ describe("Update budget Tests", () => {
     cy.url().should("eq", Cypress.config().baseUrl);
     cy.get("[data-test=monthly-budget]")
       .should("contain", `Monthly budget:`)
-      .and("contain", `€ ${ctx.budget.getDecimalAmount()}`);
+      .and("contain", `$ ${ctx.budget.getDecimalAmount()}`);
 
     cy.get("[data-test=update-budget]").should("be.visible");
     cy.get("[data-test=delete-budget]").should("be.visible");

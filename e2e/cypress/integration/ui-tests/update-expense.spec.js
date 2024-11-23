@@ -32,7 +32,7 @@ describe("Update expense Tests", () => {
       if (fieldToUpdate === "date") {
         textToCheck = ctx.newExpense.date;
       } else if (fieldsToUpdate === "amount") {
-        textToCheck = `€ ${ctx.newExpense[fieldToUpdate]}`;
+        textToCheck = `$ ${ctx.newExpense[fieldToUpdate]}`;
       } else {
         textToCheck = ctx.newExpense[fieldToUpdate];
       }

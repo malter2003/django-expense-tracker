@@ -27,7 +27,7 @@ describe("Create budget Tests", () => {
     cy.get("[data-test=monthly-budget]")
       .should("be.visible")
       .and("contain", "Monthly budget:")
-      .and("contain", `€ ${ctx.budget.getDecimalAmount()}`);
+      .and("contain", `$ ${ctx.budget.getDecimalAmount()}`);
 
     cy.get("[data-test=update-budget]").should("be.visible");
     cy.get("[data-test=delete-budget]").should("be.visible");

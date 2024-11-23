@@ -51,7 +51,8 @@ class DateGenerator {
     const mmStr = String(mm).padStart(2, "0");
     const yyyy = date.getFullYear();
 
-    return `${yyyy}-${mmStr}-${ddStr}`;
+    // return `${yyyy}-${mmStr}-${ddStr}`;
+    return `${ddStr}-${mmStr}-${yyyy}`;
   }
 }
 

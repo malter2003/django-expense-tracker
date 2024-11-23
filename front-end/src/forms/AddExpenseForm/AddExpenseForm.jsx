@@ -21,8 +21,11 @@ const AddExpenseForm = () => {
   const [dateNotValid, setDateNotValid] = useState(false);
 
   const isValidDateFormat = (dateString) => {
-    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
-    return datePattern.test(dateString);
+    console.log("Input date string:", dateString);
+    const datePattern = /^\d{4}-\d{2}-\d{2}$/; // Note: For some odd reason this cannot be changed -> mm/dd/yyyy. Current format yyyy/mm/dd
+    const isValid = datePattern.test(dateString);
+    console.log("Is Valid format:", isValid)
+    return isValid
   };
 
   const handleSubmit = async (e) => {
@@ -86,13 +89,11 @@ const AddExpenseForm = () => {
             <option value=''>
               ---------
             </option>
-            <option value='Bar tabs'>Bar tabs</option>
-            <option value='Monthly bill'>Monthly bill</option>
-            <option value='Online shopping'>Online shopping</option>
-            <option value='Electronics'>Electronics</option>
-            <option value='Groceries'>Groceries</option>
-            <option value='Taxi fare'>Taxi fare</option>
-            <option value='Miscellaneous'>Miscellaneous</option>
+            <option value='Transportation'>Transportation</option>
+            <option value='Entertainment'>Entertainment</option>
+            <option value='Shopping'>Shopping</option>
+            <option value='Bills & Subscriptions'>Bills & Subscriptions</option>
+            <option value='Other'>Other</option>
           </select>
         </p>
         <p>
