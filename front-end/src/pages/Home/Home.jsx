@@ -55,19 +55,6 @@ const Home = ({ accessToken }) => {
 
       {budget.amount > 0 && <BudgetContainer />}
 
-      {expenses.length < 2 ? (
-        <h5 className='text-center instruction'>
-          When you have 2 or more expenses your line chart will be displayed.
-        </h5>
-      ) : (
-        <LineChart
-          chartData={lineChartData}
-          title={"Total amount spent per day"}
-          xLabel={"Dates"}
-          yLabel={"($) Amounts"}
-        />
-      )}
-
       {expenses.length > 0 && <ExpenseTable expenses={expenses} />}
 
       {expenses.length > 0 && <Pagination setExpenses={setExpenses} />}
