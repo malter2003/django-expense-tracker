@@ -3,12 +3,7 @@
 body {
   margin: 0;
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(45, 255, 210, 1) 100%,
-    rgba(43, 43, 43, 1) 100%
-  );
+
   font-family: "Raleway", sans-serif;
 }
 
@@ -56,5 +51,5 @@ table {
 
 thead {
   color: white;
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(77, 0, 171);
 }

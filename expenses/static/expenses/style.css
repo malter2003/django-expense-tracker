@@ -38,11 +38,11 @@ button {
 }
 
 .navbar {
-  background: rgb(227, 30, 30);
+  background: rgb(77, 0, 171);
   background: linear-gradient(
     90deg,
-    rgba(227, 30, 30, 1) 0%,
-    rgba(255, 243, 100, 1) 100%
+    rgba(77, 0, 171, 1) 0%,
+    rgba(0, 0, 1) 100%
   );
   padding: 0 15px;
 }
@@ -56,7 +56,7 @@ button {
 }
 
 .nav-item:hover {
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(77, 0, 171);
 }
 
 form {
@@ -80,7 +80,7 @@ table {
 
 thead {
   color: white;
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(77, 0, 171);
 }
 
 .user-greet {
@@ -90,7 +90,7 @@ thead {
 }
 
 .create-expense-btn {
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(77, 0, 171);
   min-width: 200px;
   margin-bottom: 10px;
   color: white !important;
@@ -115,7 +115,7 @@ thead {
 }
 
 .total-expenses-container {
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(77, 0, 171);
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
